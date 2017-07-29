@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+mounted: function () {
+var self = this;
+$.ajax({
+url: '@Url.Action("GetItems", "Settings")',
+method: 'GET',
+success: function (data) {
+self.Items = data;
+},
+error: function (error) {
+alert(JSON.stringify(error));
+}
+});
+}
+</body>
+</html>
