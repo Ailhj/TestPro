@@ -18,4 +18,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <mvc:resources mapping="/HTML/**" location="WEB-INF/HTML/" cache-period="31556926"/>
+
 </beans>

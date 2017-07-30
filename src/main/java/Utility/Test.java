@@ -22,19 +22,19 @@ import javax.mail.internet.MimeMessage;
  */
 public class Test {
     public static void main(String[] args) {
-//        try{
-//            Class.forName("com.mysql.jdbc.Driver");
-////            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/copyrighted","admin1","lml1399H*");
-//            //Connection con = DriverManager.getConnection("jdbc:mysql://118.89.147.29:3306/copyrighted","admin1","lml1399H*");
-//            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testpro","root","1234");
-//            Statement stmt = con.createStatement();
-//            ResultSet rs=stmt.executeQuery("select * from user");
-//            while(rs.next())
-//                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4));
-////                System.out.println(rs);
-//            con.close();
-//
-//        }catch (Exception e){System.out.println(e);}
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+//            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/copyrighted","admin1","lml1399H*");
+            //Connection con = DriverManager.getConnection("jdbc:mysql://118.89.147.29:3306/copyrighted","admin1","lml1399H*");
+            Connection con = DriverManager.getConnection("jdbc:mysql://173.206.162.67:3306/testpro","root","1234");
+            Statement stmt = con.createStatement();
+            ResultSet rs=stmt.executeQuery("select * from user");
+            while(rs.next())
+                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4));
+//                System.out.println(rs);
+            con.close();
+
+        }catch (Exception e){System.out.println(e);}
 
 
 //            try{
@@ -107,18 +107,18 @@ public class Test {
 //            con.close();
 //        }catch (Exception e){System.out.println(e);}
 
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testpro","root","1234");
-            Statement stmt = con.createStatement();
-            ResultSet rs=stmt.executeQuery("select expireDate from user where parent = 'Delta'");
-            rs.next();
-            Date time1 = rs.getDate(1);
-            con.close();
-            Date timeNow = new Date();
-            System.out.println(time1.after(timeNow));
-
-        }catch (Exception e){System.out.println(e);}
-
+//        try{
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testpro","root","1234");
+//            Statement stmt = con.createStatement();
+//            ResultSet rs=stmt.executeQuery("select expireDate from user where parent = 'Delta'");
+//            rs.next();
+//            Date time1 = rs.getDate(1);
+//            con.close();
+//            Date timeNow = new Date();
+//            System.out.println(time1.after(timeNow));
+//
+//        }catch (Exception e){System.out.println(e);}
+//
     }
 }

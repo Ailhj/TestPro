@@ -32,6 +32,8 @@ public class HomeController {
         return "test";
     }
 
+
+
     @RequestMapping(value = "/test")
     public String testPage(){
         return "test2";
