@@ -46,3 +46,7 @@ CREATE TABLE `user` (
   `issueCount` int(11) DEFAULT NULL,
   PRIMARY KEY (`iduser`)
 
+2017-07-29 Changes:
+Add static resource exception in spring-servlet.xml which allow the access to HTML forder by mapping "/HTML/**"
+Duplicate js code from JSP/test.jsp to HTML/test.html
+The mapping for HTML/test.html is localhost/HTML/test.html
